@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Xicho Test</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="logo">X</div>
+        <div>
+          <h1>Xicho Test</h1>
+          <p>Mehnat muhofazasi va sanoat xavfsizligi bo‘yicha test platformasi</p>
+        </div>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Rejimni almashtirish">🌙</button>
+    </header>
+
+    <main>
+      <section id="homeView" class="view active">
+        <div class="hero-card">
+          <div>
+            <p class="eyebrow">GitHub Pages web-versiya</p>
+            <h2>Yo‘nalishni tanlang va testni boshlang</h2>
+            <p class="muted">Savollar va javoblar har safar aralashtiriladi. Javob tanlanganda to‘g‘ri javob darhol ko‘rsatiladi.</p>
+          </div>
+          <div class="stats-grid">
+            <div class="stat"><strong id="directionCount">0</strong><span>yo‘nalish</span></div>
+            <div class="stat"><strong id="questionCount">0</strong><span>savol</span></div>
+          </div>
+        </div>
+
+        <div class="controls-card">
+          <label class="search-wrap">
+            <span>Yo‘nalish qidirish</span>
+            <input id="searchInput" type="search" placeholder="Masalan: elektr, kran, yong‘in..." />
+          </label>
+          <label class="select-wrap">
+            <span>Test hajmi</span>
+            <select id="testSizeSelect">
+              <option value="20">20 ta savol</option>
+              <option value="30">30 ta savol</option>
+              <option value="50">50 ta savol</option>
+              <option value="all">Barcha savollar</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="directionList" class="direction-list"></div>
+      </section>
+
+      <section id="quizView" class="view">
+        <div class="quiz-head">
+          <button id="backBtn" class="ghost-btn" type="button">← Orqaga</button>
+          <div class="quiz-title-block">
+            <p id="quizCategory" class="eyebrow"></p>
+            <h2 id="quizTitle">Test</h2>
+          </div>
+          <div id="timer" class="timer">00:00</div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-meta">
+            <span id="progressText">1 / 20</span>
+            <span id="scoreText">To‘g‘ri: 0</span>
+          </div>
+          <div class="progress-bar"><div id="progressFill"></div></div>
+        </div>
+
+        <article class="question-card">
+          <h3 id="questionText"></h3>
+          <div id="answersList" class="answers-list"></div>
+          <div id="feedback" class="feedback"></div>
+          <button id="nextBtn" class="primary-btn" type="button" disabled>Keyingi savol</button>
+        </article>
+      </section>
+
+      <section id="resultView" class="view">
+        <div class="result-card">
+          <p class="eyebrow">Natija</p>
+          <h2 id="resultTitle">Test yakunlandi</h2>
+          <div class="result-score"><span id="resultPercent">0%</span></div>
+          <p id="resultDetails" class="muted"></p>
+          <div class="result-actions">
+            <button id="retryBtn" class="primary-btn" type="button">Qayta ishlash</button>
+            <button id="homeBtn" class="ghost-btn" type="button">Bosh sahifa</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Xicho Test</span>
+      <span id="lastScore"></span>
+    </footer>
+  </div>
+
+  <script src="question_bank.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
