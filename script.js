@@ -18,8 +18,30 @@ const views = {
   result: $("resultView"),
 };
 
-/* Sayt doim kunduzgi rejimda ishlaydi */
-document.body.classList.add("light");
+
+const themeBtn = document.getElementById("themeBtn");
+
+function applyTheme(theme) {
+  if (theme === "dark") {
+    document.body.classList.remove("light");
+    if (themeBtn) themeBtn.textContent = "☀️";
+  } else {
+    document.body.classList.add("light");
+    if (themeBtn) themeBtn.textContent = "🌙";
+  }
+
+  localStorage.setItem("xicho:theme", theme);
+}
+
+const savedTheme = localStorage.getItem("xicho:theme") || "light";
+applyTheme(savedTheme);
+
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    const isLight = document.body.classList.contains("light");
+    applyTheme(isLight ? "dark" : "light");
+  });
+}
 
 function normalizeText(text) {
   return String(text ?? "")
