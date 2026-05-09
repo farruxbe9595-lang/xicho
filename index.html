@@ -4,10 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0f172a" />
+
   <title>Xicho VChD-5</title>
+
+  <meta name="description" content="VChD-5 xodimlari uchun mehnat muhofazasi va sanoat xavfsizligi bo‘yicha test platformasi" />
+
+  <meta property="og:title" content="XIChO VChD-5 test platformasi" />
+  <meta property="og:description" content="VChD-5 xodimlari uchun mehnat muhofazasi va sanoat xavfsizligi bo‘yicha testlar" />
+  <meta property="og:image" content="https://farruxbe9595-lang.github.io/xicho/assets/preview.jpg" />
+  <meta property="og:url" content="https://farruxbe9595-lang.github.io/xicho/" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="XIChO VChD-5 test platformasi" />
+  <meta name="twitter:description" content="VChD-5 xodimlari uchun mehnat muhofazasi va sanoat xavfsizligi bo‘yicha testlar" />
+  <meta name="twitter:image" content="https://farruxbe9595-lang.github.io/xicho/assets/preview.jpg" />
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="app-shell">
     <header class="topbar">
@@ -20,7 +36,10 @@
           <p>Mehnat muhofazasi va sanoat xavfsizligi bo‘yicha test platformasi</p>
         </div>
       </div>
-      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Rejimni almashtirish">🌙</button>
+
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Rejimni almashtirish">
+        🌙
+      </button>
     </header>
 
     <main>
@@ -29,19 +48,34 @@
           <div>
             <p class="eyebrow">GitHub Pages web-versiya</p>
             <h2>Yo‘nalishni tanlang va testni boshlang</h2>
-            <p class="muted">Savollar va javoblar har safar aralashtiriladi. Javob tanlanganda to‘g‘ri javob darhol ko‘rsatiladi.</p>
+            <p class="muted">
+              Savollar va javoblar har safar aralashtiriladi. Javob tanlanganda
+              to‘g‘ri javob darhol ko‘rsatiladi.
+            </p>
           </div>
+
           <div class="stats-grid">
-            <div class="stat"><strong id="directionCount">0</strong><span>yo‘nalish</span></div>
-            <div class="stat"><strong id="questionCount">0</strong><span>savol</span></div>
+            <div class="stat">
+              <strong id="directionCount">0</strong>
+              <span>yo‘nalish</span>
+            </div>
+            <div class="stat">
+              <strong id="questionCount">0</strong>
+              <span>savol</span>
+            </div>
           </div>
         </div>
 
         <div class="controls-card">
           <label class="search-wrap">
             <span>Yo‘nalish qidirish</span>
-            <input id="searchInput" type="search" placeholder="Masalan: elektr, kran, yong‘in..." />
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Masalan: elektr, kran, yong‘in..."
+            />
           </label>
+
           <label class="select-wrap">
             <span>Test hajmi</span>
             <select id="testSizeSelect">
@@ -59,10 +93,12 @@
       <section id="quizView" class="view">
         <div class="quiz-head">
           <button id="backBtn" class="ghost-btn" type="button">← Orqaga</button>
+
           <div class="quiz-title-block">
             <p id="quizCategory" class="eyebrow"></p>
             <h2 id="quizTitle">Test</h2>
           </div>
+
           <div id="timer" class="timer">00:00</div>
         </div>
 
@@ -71,14 +107,20 @@
             <span id="progressText">1 / 20</span>
             <span id="scoreText">To‘g‘ri: 0</span>
           </div>
-          <div class="progress-bar"><div id="progressFill"></div></div>
+
+          <div class="progress-bar">
+            <div id="progressFill"></div>
+          </div>
         </div>
 
         <article class="question-card">
           <h3 id="questionText"></h3>
           <div id="answersList" class="answers-list"></div>
           <div id="feedback" class="feedback"></div>
-          <button id="nextBtn" class="primary-btn" type="button" disabled>Keyingi savol</button>
+
+          <button id="nextBtn" class="primary-btn" type="button" disabled>
+            Keyingi savol
+          </button>
         </article>
       </section>
 
@@ -86,20 +128,28 @@
         <div class="result-card">
           <p class="eyebrow">Natija</p>
           <h2 id="resultTitle">Test yakunlandi</h2>
-          <div class="result-score"><span id="resultPercent">0%</span></div>
+
+          <div class="result-score">
+            <span id="resultPercent">0%</span>
+          </div>
+
           <p id="resultDetails" class="muted"></p>
+
           <div class="result-actions">
-            <button id="retryBtn" class="primary-btn" type="button">Qayta ishlash</button>
-            <button id="homeBtn" class="ghost-btn" type="button">Bosh sahifa</button>
+            <button id="retryBtn" class="primary-btn" type="button">
+              Qayta ishlash
+            </button>
+            <button id="homeBtn" class="ghost-btn" type="button">
+              Bosh sahifa
+            </button>
           </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <span>Xicho bo‘yicha bilimingizni sinang | VChD-5 Hodimlari uchun</span>
+      <span>Xicho bo‘yicha bilimingizni sinang | VChD-5 xodimlari uchun</span>
       <span id="lastScore">Yaratuvchi: ICHTB boshlig‘i G‘aniyev F.B.</span>
-      <span id="lastScore"></span>
     </footer>
   </div>
 
